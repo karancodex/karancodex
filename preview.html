@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karan Maurya (@karancodex) — Frontend (React) &amp; Mobile (React Native) Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-canvas: #0d1117;
+      --bg-subtle: #161b22;
+      --border-default: #30363d;
+      --text-primary: #e6edf3;
+      --text-secondary: #7d8590;
+      --accent-blue: #247bff;
+      --accent-cyan: #38bdf8;
+      --accent-crimson: #ff354f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .github-header {
+      width: 100%;
+      max-width: 960px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-default);
+      padding-bottom: 16px;
+    }
+
+    .github-repo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .badge-preview {
+      background: rgba(36, 123, 255, 0.15);
+      color: var(--accent-blue);
+      border: 1px solid rgba(36, 123, 255, 0.4);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .readme-wrapper {
+      width: 100%;
+      max-width: 920px;
+      background-color: var(--bg-canvas);
+      border: 1px solid var(--border-default);
+      border-radius: 10px;
+      padding: 32px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    .svg-section {
+      width: 100%;
+      margin-bottom: 30px;
+      transition: transform 0.2s ease;
+    }
+
+    .svg-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .social-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 25px 0;
+    }
+
+    .social-row a img {
+      height: 34px;
+      border-radius: 6px;
+      transition: transform 0.18s ease;
+    }
+
+    .social-row a:hover img {
+      transform: translateY(-2px);
+    }
+
+    .projects-table-container {
+      margin: 35px 0 20px 0;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--border-default);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-default);
+      font-size: 14px;
+    }
+
+    th {
+      background-color: var(--bg-subtle);
+      color: var(--text-primary);
+      font-weight: 600;
+      border-bottom: 2px solid var(--border-default);
+    }
+
+    tr:hover td {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    code {
+      background: rgba(110, 118, 129, 0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+    }
+
+    a.live-btn {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(36, 123, 255, 0.1);
+      border: 1px solid rgba(36, 123, 255, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    a.live-btn:hover {
+      background: rgba(36, 123, 255, 0.25);
+      border-color: var(--accent-blue);
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="github-header">
+    <div class="github-repo-title">
+      <span>karancodex / README.md</span>
+      <span class="badge-preview">REACT &amp; REACT NATIVE SPECIALIST</span>
+    </div>
+    <div style="font-size: 13px; color: var(--text-secondary);">
+      Branch: <strong>main</strong>
+    </div>
+  </header>
+
+  <main class="readme-wrapper">
+    <!-- 1. Hero SVG -->
+    <div class="svg-section">
+      <img src="assets/hero.svg?v=1" alt="Hero Banner" />
+    </div>
+
+    <!-- 2. About Life SVG -->
+    <div class="svg-section">
+      <img src="assets/about-life.svg?v=1" alt="About Life and Capabilities" />
+    </div>
+
+    <!-- 3. Stack SVG -->
+    <div class="svg-section">
+      <img src="assets/stack.svg?v=1" alt="Tech Stack and Orbital Ecosystem" />
+    </div>
+
+    <!-- 4. ID Dashboard SVG -->
+    <div class="svg-section">
+      <img src="assets/id-dashboard.svg?v=1" alt="Developer ID Dashboard" />
+    </div>
+
+    <!-- 5. Connect SVG -->
+    <div class="svg-section">
+      <img src="assets/connect.svg?v=1" alt="Let's Connect" />
+    </div>
+
+    <!-- Clickable Social Links -->
+    <div class="social-row">
+      <a href="https://linkedin.com/in/karan-maurya" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/karancodex" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+      </a>
+      <a href="https://karancodex.vercel.app" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/badge/Portfolio-247BFF?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
+      </a>
+      <a href="https://www.instagram.com/karancodex?rpxt=MWdtcWl6cjU2aTJ6Zw==" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+      </a>
+    </div>
+
+    <!-- Featured Projects Table -->
+    <div class="projects-table-container">
+      <h3 style="margin-bottom: 14px; font-size: 18px; font-weight: 700;">Featured Frontend &amp; Mobile Projects</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Tech Stack</th>
+            <th>Role &amp; Architecture Summary</th>
+            <th>Live Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Az-Commerce</strong></td>
+            <td><code>Next.js</code>, <code>React Native</code>, <code>Odoo ERP</code>, <code>REST APIs</code></td>
+            <td>Developing an omnichannel storefront in <strong>Next.js</strong> and cross-platform mobile client in <strong>React Native</strong>, integrated with Odoo backend APIs.</td>
+            <td><a class="live-btn" href="http://minimarvel.rightbraininfotech.in/" target="_blank" rel="noopener">Live Demo ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong>Trutions Global</strong></td>
+            <td><code>Next.js</code>, <code>TypeScript</code>, <code>Flutter / RN</code>, <code>Odoo ERP</code></td>
+            <td>Developed and shipped a high-performance <strong>Next.js/TypeScript</strong> frontend connected to Odoo ERP (Sales, Inventory, CRM, Manufacturing) and payment/shipping APIs.</td>
+            <td><a class="live-btn" href="https://muraqabahtravels.com/" target="_blank" rel="noopener">Production Site ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong>Muraqabahtravels</strong></td>
+            <td><code>React TS</code>, <code>React Native</code>, <code>Java REST APIs</code></td>
+            <td>Developed and released a <strong>React TS</strong> and <strong>React Native</strong> travel booking platform consuming Java REST APIs with dynamic search and booking flows.</td>
+            <td><a class="live-btn" href="https://muraqabahtravels.com/" target="_blank" rel="noopener">Verified Live ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong>Spot-Finder (USA &amp; India)</strong></td>
+            <td><code>React TS</code>, <code>React Native</code>, <code>Google Places API</code></td>
+            <td>Built a real-time parking discovery and reservation web and mobile app with interactive maps and payment gateways for USA and India.</td>
+            <td><span style="color: var(--text-secondary); font-size: 13px;">Client Platform</span></td>
+          </tr>
+          <tr>
+            <td><strong>Car Rental Platform</strong></td>
+            <td><code>React TS</code>, <code>React Native</code>, <code>Mapbox</code>, <code>Spring Boot</code></td>
+            <td>Built the booking web interface and <strong>React Native</strong> mobile experience with real-time ride tracking, payment gateways and REST APIs.</td>
+            <td><span style="color: var(--text-secondary); font-size: 13px;">Client Platform</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      Built for <strong>Karan Maurya</strong> (karancodex) • Full Stack Developer | React TS | Next JS | React Native • 4+ Years Experience
+    </footer>
+  </main>
+
+</body>
+</html>

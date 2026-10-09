@@ -1,0 +1,5 @@
+# Verification snapshots and logs
+verification/
+resume_exported.txt
+*.log
+.DS_Store
